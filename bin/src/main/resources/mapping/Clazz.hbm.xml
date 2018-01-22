@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="top.zzh.bean.Clazz" table="t_class" schema="d_ssh_case">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="title" column="title"/>
+
+        <set name="stuSet" cascade="save-update">
+            <key column="class_id"/>
+            <one-to-many class="top.zzh.bean.Stu"/>
+        </set>
+
+        <set name="teacherSet" table="t_class_teacher">
+            <key column="class_id"/>
+            <many-to-many class="top.zzh.bean.Teacher" column="teacher_id"/>
+        </set>
+
+    </class>
+</hibernate-mapping>

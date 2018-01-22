@@ -1,0 +1,20 @@
+1、班级管理，学生信息管理，联系人管理
+
+学生：班级   n : 1
+
+学生基本信息：学生详情  1 : 1
+
+学生：紧急联系人 1 ： n
+
+班级：老师  n : n
+
+学生：联系人 n : n
+
+
+班级 t_class
+学生基本信息 t_stu
+学生详情  t_stu_detail
+联系人 t_contract
+老师 t_teacher
+学生联系人 t_stu_contract
+老师学生表 t_class_teacher

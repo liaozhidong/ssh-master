@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ssh@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ssh">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="mysqlstudy"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sakila"/>
+    <schema id="8" parent="1" name="sshproject"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="world"/>
+    <table id="11" parent="2" name="t_class"/>
+    <table id="12" parent="2" name="t_class_teacher"/>
+    <table id="13" parent="2" name="t_contract"/>
+    <table id="14" parent="2" name="t_stu"/>
+    <table id="15" parent="2" name="t_stu_contract"/>
+    <table id="16" parent="2" name="t_stu_detail"/>
+    <table id="17" parent="2" name="t_teacher"/>
+    <column id="18" parent="11" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="11" name="title">
+      <Position>2</Position>
+      <Comment>鐝?骇鍚嶇О</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="20" parent="11" name="title">
+      <ColNames>title</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="22" parent="11" name="title">
+      <ColNames>title</ColNames>
+      <UnderlyingIndexName>title</UnderlyingIndexName>
+    </key>
+    <column id="23" parent="12" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="12" name="class_id">
+      <Position>2</Position>
+      <Comment>鐝?骇缂栧彿锛宼_class琛ㄧ殑id瀛楁?</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="12" name="teacher_id">
+      <Position>3</Position>
+      <Comment>鑰佸笀缂栧彿锛宼_teacher琛ㄧ殑id瀛楁?</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="26" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="13" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="13" name="real_name">
+      <Position>2</Position>
+      <Comment>鐪熷疄濮撳悕</Comment>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="phone">
+      <Position>3</Position>
+      <Comment>鎵嬫満鍙</Comment>
+      <DataType>char(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="30" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="14" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="14" name="num">
+      <Position>2</Position>
+      <Comment>瀛﹀彿</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="14" name="real_name">
+      <Position>3</Position>
+      <Comment>鐪熷疄濮撳悕</Comment>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="14" name="class_id">
+      <Position>4</Position>
+      <Comment>鐝?骇缂栧彿锛宼_class琛ㄧ殑id瀛楁?</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="35" parent="14" name="num">
+      <ColNames>num</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="37" parent="14" name="num">
+      <ColNames>num</ColNames>
+      <UnderlyingIndexName>num</UnderlyingIndexName>
+    </key>
+    <column id="38" parent="15" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="15" name="stu_id">
+      <Position>2</Position>
+      <Comment>瀛︾敓缂栧彿锛宼_stu琛ㄧ殑id瀛楁?</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="15" name="contract_id">
+      <Position>3</Position>
+      <Comment>鑱旂郴浜虹紪鍙凤紝t_contract琛ㄧ殑id瀛楁?</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="41" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="16" name="id">
+      <Position>1</Position>
+      <Comment>瀛︾敓鐨刬d</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="16" name="identity_no">
+      <Position>2</Position>
+      <Comment>韬?唤璇佸彿</Comment>
+      <DataType>char(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="16" name="gender">
+      <Position>3</Position>
+      <Comment>鎬у埆锛?琛ㄧず鐢凤紝1琛ㄧず濂</Comment>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="45" parent="16" name="phone">
+      <Position>4</Position>
+      <Comment>鎵嬫満鍙</Comment>
+      <DataType>char(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="16" name="identity_no">
+      <ColNames>identity_no</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="48" parent="16" name="identity_no">
+      <ColNames>identity_no</ColNames>
+      <UnderlyingIndexName>identity_no</UnderlyingIndexName>
+    </key>
+    <column id="49" parent="17" name="id">
+      <Position>1</Position>
+      <Comment>缂栧彿</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="17" name="real_name">
+      <Position>2</Position>
+      <Comment>鐪熷疄濮撳悕</Comment>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="17" name="phone">
+      <Position>3</Position>
+      <Comment>鎵嬫満鍙</Comment>
+      <DataType>char(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

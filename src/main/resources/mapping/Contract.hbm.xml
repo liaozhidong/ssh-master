@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="top.zzh.bean.Contract" table="t_contract" schema="d_ssh_case">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="realName" column="real_name"/>
+        <property name="phone" column="phone"/>
+
+        <set name="stuSet" table="t_stu_contract">
+            <key column="contract_id"/>
+            <many-to-many class="top.zzh.bean.Stu" column="stu_id"/>
+        </set>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSHProj:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SSHProj.war">
+      <element id="artifact" artifact-name="SSHProj:war exploded" />
+    </root>
+  </artifact>
+</component>

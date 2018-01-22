@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="top.zzh.bean.StuDetail" table="t_stu_detail" schema="d_ssh_case">
+        <id name="id" column="id">
+            <generator class="foreign">
+                <param name="property">stu</param>
+            </generator>
+        </id>
+        <property name="identityNo" column="identity_no"/>
+        <property name="gender" column="gender"/>
+        <property name="phone" column="phone"/>
+
+        <one-to-one name="stu" class="top.zzh.bean.Stu"/>
+
+    </class>
+</hibernate-mapping>
